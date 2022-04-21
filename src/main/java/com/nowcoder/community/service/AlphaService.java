@@ -24,10 +24,10 @@ public class AlphaService {
 //        System.out.println("初始化AlphaService");
 //    }
 
-    @PreDestroy
-    public void destroy(){
-        System.out.println("销毁AlphaService");
-    }
+//    @PreDestroy
+//    public void destroy(){
+//        System.out.println("销毁AlphaService");
+//    }
 
     public String find(){
         return alphaDao.select();
