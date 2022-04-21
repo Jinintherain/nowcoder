@@ -18,7 +18,7 @@ public class LoggerTests {
     @Test
     public void testLogger(){
         System.out.println(looger.getName());
-
+        //test
         looger.debug("debug log");
         looger.info("info log");
         looger.warn("warn log");
