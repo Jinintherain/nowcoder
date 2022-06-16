@@ -11,7 +11,7 @@ public class Page {
     private int limit = 10;
     //数据总数(用于计算总页数)
     private int rows;
-    //查询路径(用于复用分页连接)
+    //查询路径(用于复用分页链接)
     private String path;
 
     public int getCurrent() {
@@ -38,7 +38,8 @@ public class Page {
         return rows;
     }
 
-    public void setRows(int rows) {
+    public void setRows(int rows)
+    {
         if (rows >= 0) {
             this.rows = rows;
         }
