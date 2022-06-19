@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class AlphaAspect {
 
     @Pointcut("execution(* com.nowcoder.community.service.*.*(..))")
-    public void pointcut() {lo
+    public void pointcut() {
 
     }
 
