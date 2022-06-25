@@ -14,6 +14,9 @@ import org.springframework.stereotype.Component;
 import sun.rmi.runtime.Log;
 
 import java.io.PrintWriter;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 @Component
 public class EventConsumer implements CommunityConstant {
@@ -37,7 +40,24 @@ public class EventConsumer implements CommunityConstant {
 
         // 发送站内通知
         Message message = new Message();
-        message.setFromId();
+        message.setFromId(SYSTEM_USER_ID);
+        message.setToId(event.getEntityUserId());
+        message.setConversationId(event.getTopic());
+        message.setCreateTime(new Date());
+
+        Map<String, Object> content = new HashMap<>();
+        content.put("userId", event.getUserId());
+        content.put("entityType", event.getEntityType());
+        content.put("entityId", event.getEntityId());
+
+        if (!event.getData().isEmpty()) {
+            for (Map.Entry<String, Object> entry : event.getData().entrySet()) {
+                content.put(entry.getKey(), entry.getValue());
+            }
+        }
+
+        message.setContent(JSONObject.toJSONString(content));
+        messageService.addMessage(message);
 
     }
 }

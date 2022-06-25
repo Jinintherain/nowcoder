@@ -56,4 +56,9 @@ public interface CommunityConstant {
      * 主题: 关注
      */
     String TOPIC_FOLLOW = "follow";
+
+    /**
+     * 系统用户ID
+     */
+    int SYSTEM_USER_ID = 1;
 }

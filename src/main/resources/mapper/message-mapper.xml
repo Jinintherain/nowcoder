@@ -67,7 +67,7 @@
 
     <insert id="insertMessage" parameterType="com.nowcoder.community.entity.Message" keyProperty="id">
         insert into message(<include refid="insertFields"></include>)
-        values (#{fromId},#{toId},#{conversationId},#{content},#{status},#{createTime})
+        values(#{fromId},#{toId},#{conversationId},#{content},#{status},#{createTime})
     </insert>
 
     <update id="updateStatus">
