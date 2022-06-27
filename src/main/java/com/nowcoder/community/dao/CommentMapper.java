@@ -2,7 +2,6 @@ package com.nowcoder.community.dao;
 
 import com.nowcoder.community.entity.Comment;
 import org.apache.ibatis.annotations.Mapper;
-import org.yaml.snakeyaml.comments.CommentType;
 
 import java.util.List;
 
