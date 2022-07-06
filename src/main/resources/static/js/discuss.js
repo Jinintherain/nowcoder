@@ -20,7 +20,7 @@ function like(btn, entityType, entityId, entityUserId, postId) {
     );
 }
 
-/ 置顶与取消置顶
+// 置顶与取消置顶
 function setTop() {
     $.post(
         CONTEXT_PATH + "/discuss/top",
