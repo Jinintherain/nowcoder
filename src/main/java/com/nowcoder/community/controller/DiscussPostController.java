@@ -56,7 +56,7 @@ public class DiscussPostController implements CommunityConstant {
         post.setTitle(title);
         post.setContent(content);
         post.setCreateTime(new Date());
-        discussPostService.addDisscussPost(post);
+        discussPostService.addDiscussPost(post);
 
         // 触发发帖事件
         Event event = new Event()
