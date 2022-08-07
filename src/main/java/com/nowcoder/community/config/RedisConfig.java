@@ -1,6 +1,5 @@
 package com.nowcoder.community.config;
 
-import javafx.beans.binding.ObjectExpression;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
